@@ -1,6 +1,14 @@
+import { ListThumbnails } from "./components/ListThumbnails";
+import { ListVideos } from "./components/ListVideos";
+import { UploadFile } from "./components/UploadFile";
+
 function App() {
 	return (
-		<h1 className="text-3xl font-bold underline text-red-900">Hello world!</h1>
+		<div>
+			<ListVideos />
+			<ListThumbnails />
+			<UploadFile />
+		</div>
 	);
 }
 
