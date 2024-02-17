@@ -19,4 +19,12 @@ export class PrismaVideoImplementation implements IVideoRepository {
 	async list() {
 		return await this.repository.video.findMany({});
 	}
+
+	async find(id: string) {
+		return await this.repository.video.findUnique({
+			where: {
+				id: id,
+			},
+		});
+	}
 }
