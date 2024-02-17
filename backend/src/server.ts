@@ -1,8 +1,6 @@
 import express from "express";
 import cors from "cors";
-// import { appRoutes } from "./application/infra";
 import { env } from "./helpers/env";
-import { config } from "dotenv";
 import { appRoutes } from "./application/infra";
 
 const app = express();
