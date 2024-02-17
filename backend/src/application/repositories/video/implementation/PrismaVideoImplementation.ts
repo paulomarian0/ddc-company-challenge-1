@@ -27,4 +27,12 @@ export class PrismaVideoImplementation implements IVideoRepository {
 			},
 		});
 	}
+
+	async delete(id: string): Promise<void> {
+		await this.repository.video.delete({
+			where: {
+				id: id,
+			},
+		});
+	}
 }

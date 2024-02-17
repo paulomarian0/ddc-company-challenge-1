@@ -27,4 +27,12 @@ export class PrismaThumbnailImplementation implements IThumbnailRepository {
 			},
 		});
 	}
+
+	async delete(id: string) {
+		await this.repository.thumbnail.delete({
+			where: {
+				id: id,
+			},
+		});
+	}
 }
