@@ -4,6 +4,12 @@ export class DownloadVideoUseCase {
 	constructor(private videoRepository: IVideoRepository) {}
 
 	async execute(id: string) {
-		return await this.videoRepository.find(id);
+		const video = await this.videoRepository.find(id);
+
+		if (!video) {
+			throw new Error("Video not found");
+		}
+
+		return video;
 	}
 }

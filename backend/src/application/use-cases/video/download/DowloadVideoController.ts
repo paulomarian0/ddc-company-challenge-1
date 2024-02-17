@@ -12,6 +12,6 @@ export class DownloadVideoController {
 
 		await copyFile(`./uploads/videos/${video?.name}`);
 
-		return response.download(`./uploads/videos/${video?.name}`);
+		return response.json({ message: "Downloaded successfully" });
 	}
 }

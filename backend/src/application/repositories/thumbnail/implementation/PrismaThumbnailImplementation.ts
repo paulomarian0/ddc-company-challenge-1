@@ -19,4 +19,12 @@ export class PrismaThumbnailImplementation implements IThumbnailRepository {
 	async list() {
 		return await this.repository.thumbnail.findMany({});
 	}
+
+	async find(id: string) {
+		return await this.repository.thumbnail.findUnique({
+			where: {
+				id: id,
+			},
+		});
+	}
 }
