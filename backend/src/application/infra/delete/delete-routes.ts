@@ -4,7 +4,7 @@ import { Router } from "express";
 
 const deleteRoutes = Router();
 
-deleteRoutes.get("/video/:id", (req, res) =>
+deleteRoutes.delete("/video/:id", (req, res) =>
 	deleteVideoController.handle(req, res),
 );
 
