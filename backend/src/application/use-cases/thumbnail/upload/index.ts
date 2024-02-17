@@ -1,4 +1,4 @@
-import { PrismaThumbnailImplementation } from "../../repositories/thumbnail/implementation/PrismaThumbnailImplementation";
+import { PrismaThumbnailImplementation } from "../../../repositories/thumbnail/implementation/PrismaThumbnailImplementation";
 import { UploadThumbnailController } from "./UploadThumbnailController";
 import { UploadThumbnailUseCase } from "./UploadThumbnailUseCase";
 

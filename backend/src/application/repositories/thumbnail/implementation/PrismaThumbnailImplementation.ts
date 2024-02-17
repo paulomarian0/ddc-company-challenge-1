@@ -8,11 +8,15 @@ export class PrismaThumbnailImplementation implements IThumbnailRepository {
 		this.repository = databaseAdapter;
 	}
 
-	async upload(image: string): Promise<void> {
+	async upload(image: string) {
 		await this.repository.thumbnail.create({
 			data: {
 				name: image,
 			},
 		});
+	}
+
+	async list() {
+		return await this.repository.thumbnail.findMany({});
 	}
 }

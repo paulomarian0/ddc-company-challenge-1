@@ -1,9 +1,9 @@
-import { IThumbnailRepository } from "../../repositories/thumbnail/IThumbnailRepository";
+import { IThumbnailRepository } from "../../../repositories/thumbnail/IThumbnailRepository";
 
 export class UploadThumbnailUseCase {
 	constructor(private thumbnailRepository: IThumbnailRepository) {}
 
-	async execute(filename: string, filePath: string): Promise<void> {
+	async execute(filename: string): Promise<void> {
 		await this.thumbnailRepository.upload(filename);
 	}
 }

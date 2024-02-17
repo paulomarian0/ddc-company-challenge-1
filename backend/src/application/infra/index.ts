@@ -1,10 +1,10 @@
 import { Router } from "express";
-import { thumbnailRoutes } from "./thumbnail/thumbnail-routes";
-import { videoRoutes } from "./video/video-routes";
+import { uploadRoutes } from "./upload/upload-routes";
+import { listRoutes } from "./list/list-routes";
 
 const appRoutes = Router();
 
-appRoutes.use("/thumbnail", thumbnailRoutes);
-appRoutes.use("/video", videoRoutes);
+appRoutes.use("/upload", uploadRoutes);
+appRoutes.use("/list", listRoutes);
 
 export { appRoutes };
