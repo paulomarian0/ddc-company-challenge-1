@@ -10,9 +10,26 @@ datasource db {
   url      = env("DATABASE_URL")
 }
 
-model File {
-  id            Int    @id @default(autoincrement())
-  title         String
-  videoFilePath String
-  thumbnailPath String
+model file {
+  id          String    @id @default(uuid())
+  title       String
+  description String
+  video       video     @relation(fields: [videoId], references: [id])
+  thumbnail   thumbnail @relation(fields: [thumbnailId], references: [id])
+  videoId     String    @unique
+  thumbnailId String    @unique
+}
+
+model video {
+  id        String   @id @default(uuid())
+  name      String
+  file      file?
+  createdAt DateTime @default(now())
+}
+
+model thumbnail {
+  id        String   @id @default(uuid())
+  name      String
+  file      file?
+  createdAt DateTime @default(now())
 }
