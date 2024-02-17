@@ -25,7 +25,7 @@ const ListVideos = () => {
 		<div className="container mx-auto px-4 py-8">
 			<h2 className="text-2xl font-bold mb-4">Vídeos</h2>
 			<div className="grid grid-cols-1  gap-4">
-				{data.length === 0 && (
+				{data?.length === 0 && (
 					<p className="text-gray-500 text-center">Nenhum vídeo encontrado</p>
 				)}
 				{data?.map((video: IVideos) => (
